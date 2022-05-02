@@ -6,10 +6,26 @@ Vous pouvez retrouver le projet sur <https://github.com/alexgaill/ASIDEV2-API>.
 
 
 ## Liens utiles
+> [blogSql](https://github.com/alexgaill/blogsql)
+
 
 ## Pour lancer le projet
 
+> @Require {
+>    "php": 8.1,
+>    "composer": 2.*
+>}
+>
+
+ ``` composer install ```
+
 ## TP du cours API
+
+Vous allez réaliser un projet front et back par groupe de 4.
+Vous choisirez votre projet parmi les 3 proposés.
+
+Ce projet sera à présenter vendredi après-midi (rapportez un adaptateur pour diffuser sur les écrans).
+
 
 > - [Agence immobilière](tp/agency.md)
 > - [Association animaux](tp/association.md)
