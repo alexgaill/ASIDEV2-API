@@ -21,10 +21,12 @@ Vous pouvez retrouver le projet sur <https://github.com/alexgaill/ASIDEV2-API>.
 
 ## TP du cours API
 
-Vous allez réaliser un projet front et back par groupe de 4.
+Vous allez réaliser un projet par groupe de 4.
 Vous choisirez votre projet parmi les 3 proposés.
 
 Ce projet sera à présenter vendredi après-midi (rapportez un adaptateur pour diffuser sur les écrans).
+
+Vous devrez respecter le module en cours et donc réaliser d'un côté votre api et de l'autre le front puis relier les deux. L'api doit être sécurisée et documentée, la gestion des request_method est obligatoire.
 
 
 > - [Agence immobilière](tp/agency.md)
@@ -32,7 +34,7 @@ Ce projet sera à présenter vendredi après-midi (rapportez un adaptateur pour 
 > - [Restaurant](tp/restaurant.md)
 
 ## Une question sur le projet? 
-# [Contactez-moi](mailto:contact@steptosuccess.com)
+### [Contactez-moi](mailto:contact@steptosuccess.com)
 
 ## Pour aller plus loin vous pouvez:
 

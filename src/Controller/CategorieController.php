@@ -4,8 +4,14 @@ namespace App\Controller;
 use App\Model\CategorieModel;
 use Core\Controller\DefaultController;
 
-class CategorieController extends DefaultController {
+final class CategorieController extends DefaultController {
 
+    private $model;
+
+    public function __construct ()
+    {
+        $this->model = new CategorieModel();
+    }
     /**
      * Retourne la liste des catégories
      *
@@ -13,7 +19,17 @@ class CategorieController extends DefaultController {
      */
     public function index ():void
     {
-        $model = new CategorieModel();
-        $this->jsonResponse($model->findAll());
+        $this->jsonResponse($this->model->findAll());
+    }
+
+    public function single (int $id)
+    {
+        $this->jsonResponse($this->model->find($id));
+    }
+
+    public function save(): void
+    {
+        $lastId = $this->model->saveCategorie($_POST);
+        $this->jsonResponse($this->model->find($lastId), 201);
     }
 }

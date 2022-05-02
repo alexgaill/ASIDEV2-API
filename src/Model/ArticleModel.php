@@ -4,7 +4,7 @@ namespace App\Model;
 use Core\Model\DefaultModel;
 
 /**
- * @method Categorie[] findAll()
+ * @method Article[] findAll()
  */
 class ArticleModel extends DefaultModel {
 
