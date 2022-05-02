@@ -28,6 +28,8 @@ Ce projet sera à présenter vendredi après-midi (rapportez un adaptateur pour 
 
 Vous devrez respecter le module en cours et donc réaliser d'un côté votre api et de l'autre le front puis relier les deux. L'api doit être sécurisée et documentée, la gestion des request_method est obligatoire.
 
+L'utilisation de framework est interdit (même micro-framework), l'utilisation de dépendances comme fakerPHP est possible.
+
 
 > - [Agence immobilière](tp/agency.md)
 > - [Association animaux](tp/association.md)
