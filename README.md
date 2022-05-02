@@ -12,7 +12,7 @@ Vous pouvez retrouver le projet sur <https://github.com/alexgaill/ASIDEV2-API>.
 ## Pour lancer le projet
 
 > @Require {
->    "php": 8.1,
+>    "php": 8.0.*,
 >    "composer": 2.*
 >}
 >
