@@ -1,6 +1,7 @@
 <?php
 
 use Core\Routeur\Routeur;
+use App\Security\ApiKeySecurity;
 
 define('ROOT', dirname(__DIR__));
 require ROOT ."/vendor/autoload.php";
@@ -15,6 +16,8 @@ header("Access-Control-Allow-Methods: GET, PATCH, OPTIONS");
 // Indique le temps d'existence max de ces données. Cette information va être utilisée pour le cache
 header('Access-Control-Max-Age:1728000');
 
-// Chargement du routeur
-require ROOT ."/Core/Routeur/Routeur.php";
-Routeur::router();
+
+if (ApiKeySecurity::verifyApiKey()) {
+    require ROOT ."/Core/Routeur/Routeur.php";
+    Routeur::router();
+}
