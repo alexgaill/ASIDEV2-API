@@ -3,7 +3,10 @@ namespace App\Entity;
 
 use JsonSerializable;
 
-class Article implements JsonSerializable {
+/**
+ * Entité de la table article
+ */
+final class Article implements JsonSerializable {
 
     private int $id;
 

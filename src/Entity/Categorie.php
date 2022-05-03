@@ -3,7 +3,12 @@ namespace App\Entity;
 
 use JsonSerializable;
 
-class Categorie implements JsonSerializable {
+/**
+ * Entité de la table categorie
+ * 
+ * @see https://www.php.net/manual/fr/class.jsonserializable.php
+ */
+final class Categorie implements JsonSerializable {
     // Uniquement pour php 8.1
     // readonly met la propriété en lecture seul
     // private readonly int $id;

@@ -4,6 +4,9 @@ namespace Core\Model;
 use Core\Database\Database;
 use Core\Traits\JsonTrait;
 
+/**
+ * Model par défaut contenant les méthodes utiles à tous les model
+ */
 class DefaultModel extends Database {
 
     use JsonTrait;
@@ -14,9 +17,9 @@ class DefaultModel extends Database {
     /**
      * Retourne l'ensemble des éléments d'une table
      *
-     * @return array<int,object>
+     * @return array<int,object>|false
      */
-    public function findAll(): array
+    public function findAll(): array|false
     {
         try {
             $stmt = "SELECT * FROM $this->table";
@@ -33,6 +36,12 @@ class DefaultModel extends Database {
         }
     }
 
+    /**
+     * Charge un élément en fonction de son id
+     *
+     * @param integer $id
+     * @return object|false
+     */
     public function find (int $id): object|false
     {
         try {

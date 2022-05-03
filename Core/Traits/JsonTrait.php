@@ -2,10 +2,17 @@
 namespace Core\Traits;
 
 /**
- * @method void jsonResponse( mixed $data, int $code= 200 ) Envoie les données passées en paramètre au format json
+ * @see https://www.php.net/manual/fr/function.http-response-code
  */
 trait JsonTrait {
 
+    /**
+     * Envoie les données passées en paramètre au format json
+     *
+     * @param mixed $data
+     * @param integer $code
+     * @return void
+     */
     protected function jsonResponse (mixed $data, int $code = 200): void
     {
         header("content-type: application/json");

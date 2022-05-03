@@ -5,8 +5,9 @@ use Core\Model\DefaultModel;
 
 /**
  * @method Article[] findAll()
+ * @method Article find(int $id)
  */
-class ArticleModel extends DefaultModel {
+final class ArticleModel extends DefaultModel {
 
     protected string $table = "article";
     protected string $entity = "Article";

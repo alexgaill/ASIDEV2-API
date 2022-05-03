@@ -5,7 +5,7 @@ Une agence immobilière vous contacte pour réaliser un site web afin qu'ils pui
 
 Ce site a besoin également d'une partie administration pour les agents immobiliers afin qu'ils puissent gérer les biens dont ils possèdent les mandats et gérer leurs rendez-vous.
 
-Un super admin(le gérant de l'agence) aura quant à lui accès à tous les biens et pourra créer des utilisateurs
+Un super admin(le gérant de l'agence) aura quant à lui accès à tous les biens et pourra créer des comptes pour les nouveaux agents.
 
 ## Les pages
 
@@ -39,7 +39,7 @@ Ils pourront également consulter leurs rendez-vous, et les annuler au besoin.
 
 ## Inscription
 
-Seul le gérant de l'agence peut inscrire des personnes. Il inscrira les agents immobiliers ou d'autres personnes. Il attribue les rôles aux utilisateurs.
+Seul le gérant de l'agence peut inscrire des personnes. Il inscrira les agents immobiliers ou d'autres gérants. Il attribue les rôles aux comptes.
 
 ## Les rôles
 
@@ -60,4 +60,3 @@ C'est le gérant de l'agence.
 
 Il voit tous les biens et peut tous les gérer.
 Il peut inscrire des collaborateurs et gérer les comptes (modification d'information, suppresion de compte, ...)
-

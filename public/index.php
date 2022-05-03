@@ -25,4 +25,3 @@ if (isset($_SERVER["PATH_INFO"])) {
 } else {
     // TODO: Error message
 }
-// (new CategorieController)->index();

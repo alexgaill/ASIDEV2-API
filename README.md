@@ -4,20 +4,39 @@ Ce projet est réalisé avec la promotion **IPSSI ASIDEV2** de l'année 2022.
 
 Vous pouvez retrouver le projet sur <https://github.com/alexgaill/ASIDEV2-API>.
 
+## Chapitres du cours
+1. Qu'est-ce qu'Api et REST
+2. Nos premières fonctions et le format JSON
+3. Organiser son code pour plus de clarté
+4. Server Request Method
+5. Les CORS Policy
+6. La sécurisation de l'api
+7. La documentation de l'api
+
+#### BONUS
+8. Api avec symfony
 
 ## Liens utiles
+> [Composer](https://getcomposer.org/download/)
+>
 > [blogSql](https://github.com/alexgaill/blogsql)
+>
+> [Packagist](https://packagist.org/)
 
 
 ## Pour lancer le projet
 
-> @Require {
->    "php": 8.0.*,
->    "composer": 2.*
->}
->
-
- ``` composer install ```
+```json
+{
+"require": {
+    "php": 8.*,
+    "composer": 2.*
+}
+```
+```sh
+ # Dans le terminal
+ composer install 
+ ```
 
 ## TP du cours API
 
