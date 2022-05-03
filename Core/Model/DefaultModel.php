@@ -52,4 +52,19 @@ class DefaultModel extends Database {
             $this->jsonResponse($e->getMessage(), 400);
         }
     }
+
+    /**
+     * Supprime un élément en BDD
+     *
+     * @param integer $id
+     * @return boolean
+     */
+    public function delete (int $id): bool
+    {
+        $stmt = "DELETE FROM $this->table WHERE id = :id";
+        $prepare = $this->pdo->prepare($stmt);
+        $prepare->bindParam(":id", $id);
+
+        return $prepare->execute();
+    }
 }

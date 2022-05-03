@@ -22,6 +22,8 @@ Vous pouvez retrouver le projet sur <https://github.com/alexgaill/ASIDEV2-API>.
 > [blogSql](https://github.com/alexgaill/blogsql)
 >
 > [Packagist](https://packagist.org/)
+>
+> [Utiliser la request method put](https://waytolearnx.com/2020/01/recuperer-les-donnees-json-envoye-par-la-methode-put-en-php.html)
 
 
 ## Pour lancer le projet

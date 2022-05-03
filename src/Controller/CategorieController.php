@@ -40,11 +40,26 @@ final class CategorieController extends DefaultController {
     /**
      * Enregistre une catégorie en BDD et retourne les informations enregistrées avec l'id
      *
+     * @param array $categorie
      * @return void
      */
-    public function save(): void
+    public function save(array $categorie): void
     {
-        $lastId = $this->model->saveCategorie($_POST);
+        $lastId = $this->model->saveCategorie($categorie);
         $this->jsonResponse($this->model->find($lastId), 201);
+    }
+
+    public function update(int $id, array $categorie): void
+    {
+        if ($this->model->updateCategorie($id, $categorie)) {
+            $this->jsonResponse($this->model->find($id), 201);
+        }
+    }
+
+    public function delete (int $id): void
+    {
+        if ($this->model->delete($id)) {
+            $this->jsonResponse("Categorie supprimée avec succès");
+        }
     }
 }
