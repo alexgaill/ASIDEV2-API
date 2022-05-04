@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  title: Superblog
+  description: 'Blog opensource'
+  version: '1.1'
+servers:
+  -
+    url: 'http://localhost:8000'
+    description: 'Server de test'
+paths:
+  /categorie:
+    get:
+      summary: 'Retourne l''ensemble des catégories'
+      description: 'Retourne la liste des catégories'
+      operationId: 6ca3f34cd03c31c4da51cc133a75733a
+      responses:
+        '200':
+          description: 'Liste des catégories'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Categorie'
+        '404':
+          description: 'Not Found'
+          content:
+            application/json:
+              schema:
+                properties:
+                  message: { type: string, example: 'Route not found' }
+                type: object
+    post:
+      summary: 'Enregistre une catégorie en BDD et retourne les informations enregistrées avec l''id'
+      operationId: 716309a0c867895237359ffe441ff66e
+      requestBody:
+        request: 'Ajout d''une categorie'
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                name:
+                  type: string
+              type: object
+  '/categorie/{id}':
+    get:
+      summary: 'Retourne une catégorie en fonction de son id'
+      operationId: 287834d7700e96fc8d9e955e1d6d9c48
+      parameters:
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 'Retourne une catégorie en fonction de l''id'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Categorie'
+components:
+  schemas:
+    Categorie:
+      title: Categorie
+      description: 'Entité de la table categorie'
+      properties:
+        id:
+          type: integer
+          example: 3
+          nullable: false
+        name:
+          type: string
+          example: 'Catégorie n°3'
+          nullable: false
+      type: object

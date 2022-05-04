@@ -2,18 +2,30 @@
 namespace App\Entity;
 
 use JsonSerializable;
+use OpenApi\Attributes as OA;
 
 /**
  * Entité de la table categorie
  * 
  * @see https://www.php.net/manual/fr/class.jsonserializable.php
  */
+#[OA\Schema(title:"Categorie")]
 final class Categorie implements JsonSerializable {
     // Uniquement pour php 8.1
     // readonly met la propriété en lecture seul
     // private readonly int $id;
+    #[OA\Property(
+        type:"integer",
+        nullable:false,
+        example:3
+    )]
     private int $id;
 
+    #[OA\Property(
+        type:"string",
+        nullable:false,
+        example:"Catégorie n°3"
+    )]
     private string $name;
 
     /**
