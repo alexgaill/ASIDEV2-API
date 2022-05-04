@@ -34,6 +34,7 @@ final class CategorieController extends DefaultController {
      */
     public function single (int $id)
     {
+        $this->isGranted("ROLE_USER");
         $this->jsonResponse($this->model->find($id));
     }
 
@@ -45,6 +46,7 @@ final class CategorieController extends DefaultController {
      */
     public function save(array $categorie): void
     {
+        $this->isGranted("ROLE_ADMIN");
         $lastId = $this->model->saveCategorie($categorie);
         $this->jsonResponse($this->model->find($lastId), 201);
     }

@@ -24,6 +24,8 @@ Vous pouvez retrouver le projet sur <https://github.com/alexgaill/ASIDEV2-API>.
 > [Packagist](https://packagist.org/)
 >
 > [Utiliser la request method put](https://waytolearnx.com/2020/01/recuperer-les-donnees-json-envoye-par-la-methode-put-en-php.html)
+>
+> [jwToken](https://jwt.io/)
 
 
 ## Pour lancer le projet

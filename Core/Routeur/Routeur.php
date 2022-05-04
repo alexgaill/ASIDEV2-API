@@ -25,11 +25,20 @@ public static function router ()
                         }
                     break;
                 case 'POST': 
-                        if (!empty($_POST)) {
-                            $controller->save($_POST);
+                    if (!empty($_POST)) {
+                        if (isset($path[2]) && is_string($path[2])) {
+                            $method = $path[2];
+                            if (method_exists($controller, $method)) {
+                                $controller->$method($_POST);
+                            } else {
+                                throw new \Exception("La méthode $method n'existe pas", 404);
+                            }
                         } else {
-                            throw new \Exception("Données manquantes pour l'ajout en BDD", 400);
+                            $controller->save($_POST);
                         }
+                    } else {
+                        throw new \Exception("Données manquantes pour l'ajout en BDD", 400);
+                    }
                     break;
                 case 'PUT': 
                     parse_str(file_get_contents("php://input"), $_PUT);
