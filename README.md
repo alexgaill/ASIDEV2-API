@@ -4,6 +4,12 @@ Ce projet est réalisé avec la promotion **IPSSI ASIDEV2** de l'année 2022.
 
 Vous pouvez retrouver le projet sur <https://github.com/alexgaill/ASIDEV2-API>.
 
+## Evaluation du module
+
+Merci pour votre présence à ce module.
+N'hésitez pas à me faire vos retours sur ce lien --> [Formulaire](https://bit.ly/3OSXf1h)
+Si possible des retours constructifs.
+
 ## Chapitres du cours
 1. Qu'est-ce qu'Api et REST
 2. Nos premières fonctions et le format JSON
@@ -40,7 +46,13 @@ Vous pouvez retrouver le projet sur <https://github.com/alexgaill/ASIDEV2-API>.
 ```sh
  # Dans le terminal
  composer install 
+ # Lancez le projet avec un serveur php pour que l'api fonctionne
+ php -S localhost:8000 -t public
  ```
+
+```
+Lancez l'html de la doc en live pour avoir l'affichage de la documentation
+```
 
 ## TP du cours API
 
